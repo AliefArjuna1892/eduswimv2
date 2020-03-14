@@ -1,0 +1,92 @@
+{
+  "name": "component",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "convertSvgToJs": "npx @svgr/cli --native  -d assets/svgs assets/images",
+    "eslint": "eslint app __tests__ index.* --ext .js .jsx --cache",
+    "eslint:fix": "npm run eslint -- --fix",
+    "precommit": "npm run eslint",
+    "prepush": "npm run eslint",
+    "start": "react-native start",
+    "test": "jest",
+    "lint": "eslint .",
+    "test:updateSnapshot": "npm run test -- --updateSnapshot",
+    "test:coverage": "npm run test -- --coverage "
+  },
+  "dependencies": {
+    "@react-navigation/bottom-tabs": "^5.1.0",
+    "lodash": "^4.17.10",
+    "moment": "^2.22.2",
+    "native-base": "^2.13.8",
+    "react": "16.8.6",
+    "react-native": "0.60.5",
+    "react-native-animatable": "^1.3.3",
+    "react-native-button": "^2.4.0",
+    "react-native-flexi-radio-button": "^0.2.2",
+    "react-native-gesture-handler": "^1.6.0",
+    "react-native-i18n": "^2.0.12",
+    "react-native-modal": "^11.5.4",
+    "react-native-parallax-header": "^1.1.3",
+    "react-native-reanimated": "^1.7.0",
+    "react-native-screens": "^2.2.0",
+    "react-native-svg": "^9.3.7",
+    "react-native-vector-icons": "^6.6.0",
+    "react-native-video": "^5.0.2",
+    "react-native-youtube": "^1.0.0",
+    "react-navigation": "^1.5.8",
+    "react-navigation-tabs": "^2.8.2",
+    "react-redux": "^5.0.7",
+    "react-router-native": "^5.1.2",
+    "redux": "^3.7.2",
+    "redux-form": "^7.4.2",
+    "redux-thunk": "^2.2.0",
+    "rn-fetch-blob": "^0.10.14"
+  },
+  "devDependencies": {
+    "@svgr/cli": "^3.0.0",
+    "@babel/core": "^7.5.5",
+    "@babel/runtime": "^7.5.5",
+    "babel-jest": "^24.8.0",
+    "babel-preset-react-native": "4.0.0",
+    "enzyme": "^3.3.0",
+    "enzyme-adapter-react-16": "^1.1.1",
+    "eslint": "^6.1.0",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-config-prettier": "^2.9.0",
+    "eslint-plugin-import": "^2.9.0",
+    "eslint-plugin-jest": "^21.15.0",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-prettier": "^2.6.0",
+    "eslint-plugin-react": "^7.7.0",
+    "eslint-plugin-react-native": "^3.2.1",
+    "husky": "^0.14.3",
+    "jest": "^24.8.0",
+    "prettier": "^1.11.1",
+    "prop-types": "^15.6.1",
+    "react-dom": "^16.3.1",
+    "metro-react-native-babel-preset": "^0.56.0",
+    "react-test-renderer": "16.8.6"
+  },
+  "jest": {
+    "preset": "react-native",
+    "moduleNameMapper": {
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/tests/assetsTransformer.js",
+      "\\.(css|less)$": "<rootDir>/tests/assetsTransformer.js"
+    },
+    "setupFiles": [
+      "./tests/enzymeTestAdapterSetup.js"
+    ],
+    "collectCoverageFrom": [
+      "app/components/**/*.js",
+      "app/screens/**/*.js",
+      "app/utils/**/*.js"
+    ],
+    "transformIgnorePatterns": []
+  },
+  "rnpm": {
+    "assets": [
+      "./assets/fonts/"
+    ]
+  }
+}
