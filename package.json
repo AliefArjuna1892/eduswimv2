@@ -16,7 +16,7 @@
   },
   "dependencies": {
     "@react-navigation/bottom-tabs": "^5.1.0",
-    "lodash": "^4.17.10",
+    "lodash": "^4.17.19",
     "moment": "^2.22.2",
     "native-base": "^2.13.8",
     "react": "16.8.6",
